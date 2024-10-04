@@ -16,7 +16,7 @@ def positive_assert(name):
     response_status_code = kit_response.status_code
     assert kit_response.status_code == 201
     assert kit_response.json()["name"] == name
-    print(response_status_code)
+
 
 
 def negative_assert_code_400(name):

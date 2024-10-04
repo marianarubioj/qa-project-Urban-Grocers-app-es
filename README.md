@@ -46,6 +46,7 @@ y para crear un kit dentro del nuevo usuario.
 En este archivo están almacenadas las pruebas de la lista de comprobación
 del campo 'name'.
 
+## Pasos para ejecutar las pruebas
 
 ## **Creación de un nuevo usuario**
 
@@ -93,7 +94,25 @@ la tenga en cuenta.
     teniendo en cuenta el parámetro de la prueba.
 
 
+## Lista de comprobación por tener en cuenta
 
+1. El número permitido de caracteres (1): kit_body = { "name": "a"}
+2. El número permitido de caracteres (511): kit_body = { "name":"El valor de prueba para esta comprobación será inferior a"}
+3. El número de caracteres es menor que la cantidad permitida (0): kit_body = { "name": "" }
+4. El número de caracteres es mayor que la cantidad permitida (512): kit_body = { "name":"El valor de prueba para esta comprobación será inferior a” }
+5. Se permiten caracteres especiales: kit_body = { "name": ""№%@"," }
+6. Se permiten espacios: kit_body = { "name": " A Aaa " }
+7. Se permiten números: kit_body = { "name": "123" }
+8. El parámetro no se pasa en la solicitud: kit_body = { }
+9. Se ha pasado un tipo de parámetro diferente (número): kit_body = { "name": 123 }
+
+## Reglas
+
+Se deben tener en cuenta el headers, status_code, status_code, ok, url, request, text, json() para que
+las respuestas de las funciones sean correctas y las pruebas estén bien ejecutadas.
+Tambien, hay que tener en cuenta la conexión al git y clonar el repositorio con SSH para trabajar en el proyecto 
+de forma local. 
+Cuando ya se haya terminado de trabajar con el proyecto, se debe empuhar al git por medio de comandos de commit
 
 
 
